@@ -24,3 +24,7 @@ echo 'The following command runs and outputs the execution of your Java'
 echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 set -x
 java -jar target/${NAME}-${VERSION}.jar
+
+echo 'here we will also push the image to ECR'
+echo "the command will do aws ecr get-login"
+echo "with a secret and git push -t ${NAME}/${VERSION}"
